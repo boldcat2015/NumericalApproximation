@@ -1,0 +1,21 @@
+tic;
+x = 0 : 10 ; 
+y = rand ( 1 , length(x) ) ;
+figure;
+hold on;
+plot ( x , y , 'bo' );
+plot ( x , y , 'k-' );
+plotbezier ( x , y );
+toc;
+tic;
+t = linspace ( 0 , 1 , 12 );
+t = 2 * pi * t ;
+xx = cos(t);
+yy = sin(t);
+figure;
+hold on;
+plot ( xx , yy , 'bo' );
+plot ( xx , yy , 'k-' );
+plotbezier ( xx , yy );
+toc;
+

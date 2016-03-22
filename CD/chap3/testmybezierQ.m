@@ -1,0 +1,25 @@
+tic;
+x = 0 : 5 ; 
+y = 5 * rand ( 1 , length(x) ) ;
+figure;
+hold on;
+plot ( x , y , 'bx' );
+[xp yp] = findbezierctrl ( x , y );
+plot ( xp , yp , 'ko' );
+plot ( xp , yp , 'k-' );
+plotbezier ( xp , yp );
+toc;
+tic;
+t = linspace ( 0 , 1 , 12 );
+t = 2 * pi * t ;
+xx = cos(t);
+yy = sin(t);
+figure;
+hold on;
+plot ( xx , yy , 'bx' );
+[xxp yyp] = findbezierctrl ( xx , yy );
+plot ( xxp , yyp , 'ko' );
+plot ( xxp , yyp , 'k-' );
+plotbezier ( xxp , yyp );
+toc;
+
